@@ -3,17 +3,23 @@ const peopleObj = {
         {
             id: 1,
             name: "Jack",
-            age: 22
+            age: 22,
+            location: "London",
+            address: "123 drive",
         },
         {
             id: 2,
             name: "Jane",
-            age: 32
+            age: 32,
+            location: null,
+            address:  "321 lane",
         },
         {
             id: 3,
             name: "John",
-            age: 42
+            age: 42,
+            location: null,
+            address: null,
         }
     ]
 }

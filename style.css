@@ -1,0 +1,8 @@
+h2, p, i {
+    font-size: 16px;
+}
+
+li {
+    list-style-type:  none;
+    padding-bottom: 10px;
+}

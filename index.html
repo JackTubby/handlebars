@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Handlebars</title>
 </head>
 <body>
@@ -11,17 +12,43 @@
     <ul class="people-list-container"></ul>
 
     <script id="people-template" type="text/x-handlebars-template">
+        <h1>Each Helper</h1>
         {{#each people}}
         <li class="people">
-            <h2>{{ name }}</h2>
-            <p>{{ age }}</p>
-            <i>{{@index}}</i>
-            <br>
-            <i>{{@first}}</i>
-            <br>
-            <i>{{@last}}</i>
+            <h2>Name: {{ name }}</h2>
+            <i><b>Age:</b> {{ age }}</i>
+            <i><b>Location:</b> {{ location }}</i>
+            <i><b>Index:</b> {{@index}}</i>
+            <i><b>First:</b> {{@first}}</i>
+            <i><b>Last:</b> {{@last}}</i>
         </li>
         {{/each}}
+        <hr>
+        <h1>If Else</h1>
+        {{#each people}}
+        <li class="people">
+            <h2>Name:</b> {{ name }}</h2>
+            <i><b>Age:</b> {{ age }}</i>
+            <i><b>Location:</b> {{#if location}}{{ location }}{{else if address}}{{address}}{{else}}Unknown{{/if}}</i>
+            <i><b>Index:</b> {{@index}}</i>
+            <i><b>First:</b> {{@first}}</i>
+            <i><b>Last:</b>{{@last}}</i>
+        </li>
+        {{/each}}
+        <hr>
+        <h1>Unless Helper</h1>
+        {{#each people}}
+        <li class="people">
+            <h2>Name:</b> {{ name }}</h2>
+            <i><b>Age:</b> {{ age }}</i>
+            <i><b>Location:</b> {{#if location}}{{ location }}{{/if}}</i>
+            {{#unless location}}<i>Wherebouts are unknown...</i>{{/unless}}
+            <i><b>Index:</b> {{@index}}</i>
+            <i><b>First:</b> {{@first}}</i>
+            <i><b>Last:</b>{{@last}}</i>
+        </li>
+        {{/each}}
+        <hr>
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
