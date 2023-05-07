@@ -11,10 +11,17 @@
     <ul class="people-list-container"></ul>
 
     <script id="people-template" type="text/x-handlebars-template">
+        {{#each people}}
         <li class="people">
             <h2>{{ name }}</h2>
             <p>{{ age }}</p>
+            <i>{{@index}}</i>
+            <br>
+            <i>{{@first}}</i>
+            <br>
+            <i>{{@last}}</i>
         </li>
+        {{/each}}
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>

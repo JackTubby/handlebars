@@ -1,4 +1,4 @@
-const people = {
+const peopleObj = {
     "people": [
         {
             id: 1,
@@ -21,6 +21,5 @@ const people = {
 document.addEventListener("DOMContentLoaded", function() {
     const peopleTemplate = document.getElementById("people-template").innerHTML;
     const compiledPeopleTemplate = Handlebars.compile(peopleTemplate);
-    document.querySelector(".people-list-container").innerHTML = compiledPeopleTemplate(people.people[0]);
-
+    document.querySelector(".people-list-container").innerHTML = compiledPeopleTemplate(peopleObj); 
 });
